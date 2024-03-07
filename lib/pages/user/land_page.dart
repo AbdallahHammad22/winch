@@ -224,8 +224,11 @@ class _LandPageState extends State<LandPage> {
         appBar: AppBar(
           automaticallyImplyLeading: false,
           backgroundColor: AColors.black,
-          title: Image(
-            image: AssetImage("assets/images/logo_horizontal.png"),
+          title: SizedBox(
+            width: 120,
+            child: Image(
+              image: AssetImage("assets/images/logo6.jpg"),
+            ),
           ),
           actions: [
             Padding(

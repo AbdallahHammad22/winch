@@ -22,7 +22,6 @@ import 'package:winch/pages/vehicles/future_user_vehicle_details.dart';
 import 'package:winch/pages/verify_phone_number.dart';
 import 'package:winch/widgets/brands/brand_picker.dart';
 import 'package:winch/widgets/categories/category_picker.dart';
-
 import 'controllers/providers/api/about_provider.dart';
 import 'controllers/providers/api/brand_vehicles_provider.dart';
 import 'controllers/providers/api/categories_provider.dart';
