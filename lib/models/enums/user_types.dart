@@ -1,0 +1,4 @@
+enum UsersTypes{
+  customer,
+  driver,
+}

@@ -1,0 +1,4 @@
+enum WinchRequestType{
+  live,
+  scheduled,
+}
