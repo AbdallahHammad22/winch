@@ -3,7 +3,7 @@ import 'package:winch/controllers/localization/localization.dart';
 import 'package:winch/models/brand.dart';
 import 'package:winch/models/category.dart';
 import 'package:winch/models/subtitle.dart';
-import 'package:winch/pages/brands/brands_list.dart';
+import 'package:winch/views/brands/brands_list.dart';
 import 'package:winch/widgets/app_text_field/app_text_form_field_3.dart';
 
 class BrandPicker extends StatefulWidget {

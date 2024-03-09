@@ -88,10 +88,9 @@ class ALocationPicker extends StatelessWidget {
           }
           LocationResult result = await Navigator.of(context).push(MaterialPageRoute(
             builder: (context) =>
-            // GoogleMap Key ....................................................................
               PlacePicker("AIzaSyAPhKrXFj52-N2Hu2Yyz79pn_GOy-e2-zM",
                 displayLocation: initialLocation == null
-                    ? LatLng(30.033333,31.233334)
+                    ? LatLng(26.8206,30.8025)
                     : initialLocation,
 
               )

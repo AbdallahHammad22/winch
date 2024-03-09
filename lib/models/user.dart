@@ -68,7 +68,7 @@ class User{
     if(fireBaseToken != null)
       body["fcm_token"] = fireBaseToken;
     if(referralCode != null)
-      body["registered_referral_code"] = referralCode;
+      body["registered_referral_code"] = "123456";
 
     return body;
   }

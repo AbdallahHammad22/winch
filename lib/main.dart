@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
@@ -8,18 +9,18 @@ import 'package:winch/controllers/providers/api/privacy_policy_provider.dart';
 import 'package:winch/controllers/providers/api/terms_and_conditions_provider.dart';
 import 'package:winch/controllers/providers/api/winch_requests_provider.dart';
 import 'package:winch/controllers/providers/widgets/land_page_provider.dart';
-import 'package:winch/pages/forget_passward_step1.dart';
-import 'package:winch/pages/forget_password_step2.dart';
-import 'package:winch/pages/login.dart';
-import 'package:winch/pages/register.dart';
-import 'package:winch/pages/requests/future_winch_request_details.dart';
-import 'package:winch/pages/splash_page.dart';
-import 'package:winch/pages/subscription/make_subscription.dart';
-import 'package:winch/pages/user/land_page.dart';
-import 'package:winch/pages/user/profile.dart';
-import 'package:winch/pages/vehicles/add_vehicle.dart';
-import 'package:winch/pages/vehicles/future_user_vehicle_details.dart';
-import 'package:winch/pages/verify_phone_number.dart';
+import 'package:winch/views/auth/page/forget_passward_step1.dart';
+import 'package:winch/views/auth/page/forget_password_step2.dart';
+import 'package:winch/views/auth/page/login.dart';
+import 'package:winch/views/auth/page/register.dart';
+import 'package:winch/views/requests/future_winch_request_details.dart';
+import 'package:winch/views/splash_page.dart';
+import 'package:winch/views/subscription/make_subscription.dart';
+import 'package:winch/views/user/land_page.dart';
+import 'package:winch/views/user/profile.dart';
+import 'package:winch/views/vehicles/add_vehicle.dart';
+import 'package:winch/views/vehicles/future_user_vehicle_details.dart';
+import 'package:winch/views/auth/page/verify_phone_number.dart';
 import 'package:winch/widgets/brands/brand_picker.dart';
 import 'package:winch/widgets/categories/category_picker.dart';
 import 'controllers/providers/api/about_provider.dart';
@@ -29,9 +30,11 @@ import 'controllers/providers/api/user_provider.dart';
 import 'controllers/providers/api/user_vehicles_provider.dart';
 import 'controllers/providers/settings/setting_provider.dart';
 import 'models/subscription.dart';
-import 'pages/user/wynch_intro_page.dart';
+import 'views/user/wynch_intro_page.dart';
 
-void main() {
+void main()async {
+ WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(
       ChangeNotifierProvider(
         create: (_) => SettingProvider(),
@@ -39,7 +42,6 @@ void main() {
       )
   );
 }
-
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
@@ -74,7 +76,6 @@ class MyApp extends StatelessWidget {
             accentColor: AColors.yellow,
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
-
           localizationsDelegates: [
             // ... app-specific localization delegate[s] here
             WinchLocalization.delegate,
@@ -87,7 +88,6 @@ class MyApp extends StatelessWidget {
             const Locale('ar'),
           ],
           locale: Locale(_settingProvider.language ?? 'en'),
-
           initialRoute: SplashPage.id,
           routes: {
             SplashPage.id : (_)=> SplashPage(),

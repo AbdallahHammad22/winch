@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:winch/models/app_notification.dart';
-import 'package:winch/pages/user/about_us.dart';
-import 'package:winch/pages/user/contact_us.dart';
-import 'package:winch/pages/user/make_request_page.dart';
-import 'package:winch/pages/user/packages_page.dart';
-import 'package:winch/pages/user/privacy_policy.dart';
-import 'package:winch/pages/user/user_cars.dart';
-import 'package:winch/pages/user/winch_requests_page.dart';
+import 'package:winch/views/user/about_us.dart';
+import 'package:winch/views/user/contact_us.dart';
+import 'package:winch/views/user/make_request_page.dart';
+import 'package:winch/views/user/packages_page.dart';
+import 'package:winch/views/user/privacy_policy.dart';
+import 'package:winch/views/user/user_cars.dart';
+import 'package:winch/views/user/winch_requests_page.dart';
 
 class LandPageProvider extends ChangeNotifier{
 

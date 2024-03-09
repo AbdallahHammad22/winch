@@ -5,7 +5,7 @@ import 'package:http/http.dart';
 import 'package:winch/controllers/api_routes/urls.dart';
 import 'package:winch/models/about_data.dart';
 import 'package:winch/models/category.dart';
-import 'package:winch/pages/user/contact_us.dart';
+import 'package:winch/views/user/contact_us.dart';
 
 class AboutProvider extends ChangeNotifier{
 

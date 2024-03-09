@@ -5,7 +5,7 @@ import 'package:winch/controllers/providers/api/categories_provider.dart';
 import 'package:winch/controllers/providers/api/user_provider.dart';
 import 'package:winch/models/category.dart';
 import 'package:winch/models/subtitle.dart';
-import 'package:winch/pages/categories/categories_list.dart';
+import 'package:winch/views/categories/categories_list.dart';
 import 'package:winch/widgets/app_text_field/app_text_form_field_3.dart';
 import 'package:winch/widgets/loaders/loading_manager.dart';
 

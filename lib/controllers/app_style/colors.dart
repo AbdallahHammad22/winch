@@ -9,5 +9,3 @@ class AColors {
   static const Color deepGrey =  Color(0xff707070);
 
 }
-// white 0xffffffff
-// yellow 0xffF9D248

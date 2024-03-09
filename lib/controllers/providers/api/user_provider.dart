@@ -83,7 +83,6 @@ class UserProvider extends ChangeNotifier{
    // body = user.toRegisterJson();
    // if(user.image != null) body["image"] = await MultipartFile.fromFile(user.image,filename: user.image.split("/").last);
    // FormData formData = new FormData.fromMap(body);
-
     http.Response response;
     try{
       user.fireBaseToken = await FirebaseMessaging.instance.getToken();
@@ -101,7 +100,6 @@ class UserProvider extends ChangeNotifier{
       notifyListeners();
       return -1;
     }
-
     if(response.statusCode >= 200 && response.statusCode < 300) {
       // client's request was successfully received
       userDate = User.fromJson(json.decode(response.body));
